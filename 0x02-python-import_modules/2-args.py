@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
 
-length = (len(sys.argv) -1)
+length = (len(sys.argv) - 1)
 if length == 0:
     print("{} arguments.".format(length))
 elif length == 1:
