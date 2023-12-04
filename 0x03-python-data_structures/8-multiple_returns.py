@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if sentence == ():
+    if not sentence:
         # checking if tuple is empty with () list is []
         return 0, None
     else:
