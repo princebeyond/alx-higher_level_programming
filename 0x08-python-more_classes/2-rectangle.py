@@ -3,7 +3,9 @@
 
 
 class Rectangle:
+    """Representation of a rectangle"""
     def __init__(self, width=0, height=0):
+        """Initializes the rectangle"""
         self.__height = height
         self.__width = width
 
@@ -14,7 +16,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """getter for private attribute"""
+        """setter for private attribute"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
