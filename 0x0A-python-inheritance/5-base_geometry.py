@@ -5,6 +5,5 @@ Class BaseGeometry
 
 
 class BaseGeometry:
-    def __init__(self):
-        """initailizing self"""
+        """Empty class"""
         pass
