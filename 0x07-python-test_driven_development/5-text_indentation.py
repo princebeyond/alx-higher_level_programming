@@ -7,13 +7,19 @@ The 5-text_indentation module supplies one function, text_indentation(text).
 
 def text_indentation(text):
     """splits a text into lines along "?", ":", "." followed by 2 new lines"""
-    if not isinstance(text, str):
-        raise TypeError ("text must be a string")
-    new_text = text.replace(".", ".\n\n")
-    new_text1 = new_text.replace("?", "?\n\n")
-    new_text2 =  new_text1.replace(":", ":\n\n")
-
-    lines = [line.strip() for line in new_text2.split('\n')]
-    result = '\n'.join(lines)
-
-    print(result)
+    if type(text) is not str:
+        raise TypeError("text must be a string")
+    flag = 0
+    for a in text:
+        if flag == 0:
+            if a == ' ':
+                continue
+            else:
+                flag = 1
+        if flag == 1:
+            if a == '?' or a == '.' or a == ':':
+                print(a)
+                print()
+                flag = 0
+            else:
+                print(a, end="")
