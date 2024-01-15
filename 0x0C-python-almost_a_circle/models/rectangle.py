@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-class rect
-"""
+"""Define a rectangle class"""
 from models.base import Base
 
 
