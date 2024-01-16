@@ -84,22 +84,19 @@ class Rectangle(Base):
 
     def display(self):
         """Prints #"""
-        for i in range(self.__height):
-            for j in (self.__width):
-                print("#", end="")
-            print()
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print("") for _ in range(self.y)]
+        for _ in range(self.height):
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """Overides the class rect"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
-
-    def display(self):
-        for i in range(self.__y):
-            print()
-        for j in range(self.__height):
-            print(' ' * self.x + '#' * self.width)
 
     def update(self, *args, **kwargs):
         """Update the Rectangle.
