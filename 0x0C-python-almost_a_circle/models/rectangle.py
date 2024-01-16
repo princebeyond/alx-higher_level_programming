@@ -47,7 +47,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         if not isinstance(value, int):
-            raise TypeError ("x must be an integer")
+            raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be > 0")
         self.__x = value
@@ -78,7 +78,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """Overides the class rect"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
 
     def display(self):
         for i in range(self.__y):
@@ -130,6 +132,7 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y":
                     self.y = v
+
     def to_dictionary(self):
         """Return the dictionary representation of a Rectangle."""
         return {
